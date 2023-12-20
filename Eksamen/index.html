@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrøjborgBryg - Øl for livsnydere, uden promiller.</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        </style>
+    <!-- Tilføj eventuelle yderligere meta tags, stilarter eller scripts her -->
+</head>
+
+
+
+<body>
+    <!-- Header sektion -->
+    <header>
+        <nav id="navbar">
+            <div id="navbar-left">
+                <a href="index.html" id="logo-link">
+                    <img src="images/logo.png" alt="TrøjborgBryg Logo">
+                </a>
+            </div>
+            <div id="navbar-right">
+                
+                <div id="navbar-links">
+                    <a href="index.html">Forside</a>
+                    <li class="dropdown">
+                        <a href="sortiment.html">Ølsortiment 🍻 +</a>
+                        <div class="dropdown-content">
+                            <a href="ale.html">SKÅL! ALE</a>
+                            <a href="pilsner.html">SKÅL! PILSNER</a>
+                            <a href="ipa.html">SKÅL! IPA</a>
+                        </div>
+                    </li>
+                    <a href="omos.html">Om Os</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+                <div id="basket-icon">
+                    <img src="images/basket.png" alt="Basket">
+                </div>
+                <div id="menu-icon" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+    <!-- Hovedindholdet -->
+    <div class="video-container">
+        <video id="video1" autoplay muted loop playsinline width="100%" height="auto">
+            <source src="images/video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="video2" autoplay muted loop playsinline width="100%" height="auto" style="display: none;">
+            <source src="images/video3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="video3" autoplay muted loop playsinline width="100%" height="auto" style="display: none;">
+            <source src="images/video4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Add more videos as needed -->
+    </div>
+    
+    <section class="image-section">
+        <a href="sortiment.html" class="image-link" id="produkter-link">
+            <img class="produkter-img" src="images/Produkter.png" alt="produkter">
+        </a>
+        <a href="omos.html" class="image-link" id="omos-link">
+            <img class="produkter-img" src="images/omos.png" alt="omos">
+        </a>
+        <a href="omos.html" class="image-link" id="faq-link">
+            <img class="produkter-img" src="images/faq.png" alt="faq">
+        </a>
+    </section>
+
+    </main>
+
+
+    <!-- Footer sektion -->
+    <footer>
+        <div id="footer-container">
+            <div id="footer-left">
+                <!-- Add your footer content here -->
+                <p>Kontakt os: Trøjborgbryg@email.com</p>
+            </div>
+            <div id="footer-right">
+                <!-- Add additional footer content if needed -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/your-facebook-profile" target="_blank">
+                        <img src="images/facebook-icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/your-twitter-profile" target="_blank">
+                        <img src="images/tiktok-icon.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/your-instagram-profile" target="_blank">
+                        <img src="images/instagram-icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="java.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</body>
+</html>

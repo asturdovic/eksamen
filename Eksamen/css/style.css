@@ -1,0 +1,533 @@
+body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    background-color: #FFFDE4;
+    
+}
+
+
+
+header {
+    padding: 10px;
+   
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:#0568D9;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 70px;
+    border: 2px solid #000000;
+    margin: 0; /* Reset all margins */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+#navbar-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+#navbar-links {
+    display: flex;
+    flex: 1;
+    justify-content: center; /* Adjusted alignment to the right */
+}
+
+#navbar-links a {
+    margin: 0 18px;
+    color:#ED93C1;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Abril Fatface', serif;
+    
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+    color:#FFFDE4;
+}
+  
+  /* Stil for dropdown */
+  .dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#FFDB6E;
+    min-width: 160px;
+    z-index: 1;
+    border: 2px solid #0568D9;
+    border-top: none;
+  }
+  
+  .dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+  }
+  
+ 
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+#navbar-right {
+    margin-left: auto; /* Flyt logoet til venstre ved at placere det til venstre for navbar-links */
+    display: flex;
+    align-items: center;
+}
+
+#logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    z-index: 1; /* Sørg for, at logoet er forrest */
+}
+
+#logo-link img {
+    max-width: 30%; /* Gør logoet 100% af bredden af dets container (responsivt) */
+    width: auto; /* Tillad logoet at skalere i forhold til dets oprindelige størrelse */
+    margin-top: 17%;
+    height: auto; /* Forhindrer, at logoet strækker sig, hvis du ændrer størrelsen på det vandret eller lodret */
+    border-radius: 50%; /* Rund form på logoet */
+    overflow: hidden; /* Sikrer, at billedet ikke overskrider den runde form */
+}
+
+#menu-icon {
+    cursor: pointer;
+    display: none; /* Skjul hamburger-menuen som standard */
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #000000;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+#basket-icon img {
+    max-width: 30px; /* Adjust the size as needed */
+}
+
+
+#menu-icon {
+    cursor: pointer;
+    display: none; /* Initially hide the hamburger menu on bigger screens */
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+#video4 {
+    width: 100%; /* Set the video width to 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make the video a block-level element */
+    margin-top: 70px; /* Add top margin as needed */
+}
+
+.image-section {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    align-items: center; /* Adjust as needed */
+    margin-bottom: 10%;
+}
+
+
+.produkter-img {
+    width: 100%;
+    height: auto;
+    /* Additional styles for individual images, if needed */
+}
+
+.produkter-img:hover {
+    transform: scale(1.1); /* Increase the size of the image on hover */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+h1 {
+   
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 10%;
+    font-family: 'Abril Fatface', serif;
+    background-color: #0568D9;
+    color: #ED93C1;
+    padding: 10px; /* Add padding around the text */
+}
+
+h2 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Abril Fatface', serif;
+    text-transform: capitalize;
+    background-color: #ECA21D;
+    border-radius: 20px; /* Add rounded corners */
+    color: #FFFDE4;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+p {
+    text-align: justify;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    word-spacing: 1.5px;
+    padding: 5%;
+    font-size: 20px;
+}
+
+#product-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+#product-slideshow {
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Set a maximum width if desired */
+    height: auto; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+    flex: 2;
+    border: 10px solid #ED93C1;
+    border-radius: 20px; /* Add rounded corners */
+    margin-top: 5%;
+}
+
+.product-image {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 50%; /* Set the height of the container to 100% */
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+#product-description {
+    padding: 20px;
+    flex: 1;
+}
+
+#arrow-prev,
+#arrow-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    cursor: pointer;
+    color: #FFFDE4;
+    background-color: #ED93C1;
+    padding: 10px;
+    border: none;
+    border-radius: 50px; /* Add rounded corners */
+    outline: none;
+}
+
+#arrow-prev {
+    left: 10px;
+}
+
+#arrow-next {
+    right: 10px;
+}
+
+#product-description button {
+    background-color: #0568D9; /* Set the background color */
+    color: #fff; /* Set the text color */
+    padding: 10px 20px; /* Set padding for top/bottom and left/right */
+    font-size: 20px; /* Set the font size */
+    border: none; /* Remove border */
+    border-radius: 50px; /* Add rounded corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    transition: background-color 0.3s; /* Add a smooth transition for background color */
+    display: block;
+    margin: 0 auto;
+
+    /* Additional styles on hover */
+}
+
+#product-description button:hover {
+    background-color: #ED93C1; /* Change background color on hover */
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    margin-bottom: 16px;
+    padding: 8px;
+    border: 1px solid #000000;
+}
+
+button {
+    padding: 10px;
+    background-color: #ECA21D;
+    color: #FFFDE4;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10%;
+    margin-top: 3%;
+    font-size: 20px;
+    border-radius: 50px; /* Add rounded corners */
+}
+
+button:hover {
+    background-color: #C17800;
+}
+
+footer {
+    margin-top: 20px; /* Adjust as needed */
+    background-color: #d2eac7;
+    padding: 10px;
+    border-top: 2px solid #000000;
+}
+
+#footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#footer-left,
+#footer-right {
+    color: #000000;
+}
+
+#footer-left {
+    flex: 1;
+}
+
+#footer-right {
+    margin-left: 20px; /* Add margin between the left and right sections */
+}
+
+#social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* Align social icons to the right */
+}
+
+.social-icon {
+    margin: 5px;
+    font-size: 20px;
+    /* Add additional styles for your social icons */
+}
+
+
+.social-icons a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px;
+}
+
+/* Style your footer links if needed */
+#footer-container a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#footer-container a:hover {
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #FFFDE4;
+        text-align: center;
+        border: 2px solid #000000;
+        border-top: none;
+        z-index: 0;
+    }
+
+    #navbar-links a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .navbar ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+      }
+    
+      .navbar li {
+        float: none;
+        text-align: center;
+      }
+    
+      .navbar a, .dropdown {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    
+   
+    
+    #menu-icon {
+        display: block;
+        float: right;
+        order: 2; /* Move the hamburger menu to the right on smaller screens */
+    }
+
+    #basket-icon {
+        order: 1; /* Move the basket icon to the left on smaller screens */
+        margin-right: 18px; /* Add space between the basket icon and the hamburger menu */
+    }
+
+    #navbar-right {
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar-left {
+        display: none; /* Hide the logo on smaller screens */
+    }
+
+    .dropdown-content {
+        position: relative;
+      }
+    
+      .dropdown:hover .dropdown-content {
+        display: block;
+        position: static;
+      }
+
+    #menu-icon.open + #navbar-links,
+    #navbar-links.open {
+        display: flex;
+    }
+
+    #menu-icon.open .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    #menu-icon.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-icon.open .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .image-section {
+        flex-direction: column; /* Stack images in a column on smaller screens */
+        align-items: center; /* Center the images in the column */
+    }
+
+    .produkter-img {
+        margin-bottom: 10px; /* Add space below each image on smaller screens */
+        width: 100%;
+    }
+
+    video {
+        margin-top: 100px; /* Adjust the margin-top value as needed */
+        
+    }
+
+    #arrow-prev,
+    #arrow-next {
+        font-size: 18px; /* Adjust arrow size on smaller screens */
+        padding: 8px; /* Adjust arrow padding on smaller screens */
+    }
+
+    #product-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        margin-top: 10%; /* Adjust top margin on smaller screens */
+    }
+
+    #product-slideshow {
+        margin-right: 0; /* Remove space between slideshow and description on smaller screens */
+    }
+
+    #arrow-prev,
+    #arrow-next {
+        font-size: 18px; /* Adjust arrow size on smaller screens */
+        padding: 8px; /* Adjust arrow padding on smaller screens */
+    }
+
+    h2 {
+        font-size: 36px; /* Adjust font size for smaller screens */
+        margin-left: 5%; /* Adjust margin for smaller screens */
+        margin-right: 5%; /* Adjust margin for smaller screens */
+    }
+
+    p {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        padding: 3%; /* Adjust padding for smaller screens */
+    }
+
+    .social-icons img {
+        width: 90px; /* Adjust the size for smaller screens */
+        height: 90px;
+    }
+
+    #footer-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items on smaller screens */
+    }
+
+    #footer-left,
+    #footer-right {
+        flex-basis: 100%; /* Make both sections full width on smaller screens */
+        text-align: center; /* Center the text and social icons on smaller screens */
+    }
+
+    #social-icons {
+        margin-top: 10px; /* Add space between text and social icons on smaller screens */
+    }
+}
+   
+
+  
+
+
+
+
+
